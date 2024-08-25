@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { PromotionRow } from "@/components/atoms";
+import { Header } from "@/components/moliculors";
 
 const outfit = Outfit({ subsets: ["latin"] });
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
@@ -11,16 +13,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
+    <html lang="en">
       <body className={`${outfit.className} ${jakartaSans.className}`}>
-      {children}
+        <PromotionRow />
+        <Header />
+        {children}
       </body>
-      </html>
+    </html>
   );
 }
 
