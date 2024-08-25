@@ -3,6 +3,7 @@ import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { PromotionRow } from "@/components/atoms";
 import { Header } from "@/components/moliculors";
+import Head from "next/head";
 
 const outfit = Outfit({ subsets: ["latin"] });
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
@@ -10,6 +11,9 @@ const jakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "GlobalEdulink",
   description: "Upskill from Anywhere with Industry-Recognized Learning",
+  icons: {
+    icon: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -19,6 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#055da8" />
+        <link rel="icon" href="/images/logo.png" />
+        <title>GlobalEdulink</title>
+      </Head>
       <body className={`${outfit.className} ${jakartaSans.className}`}>
         <PromotionRow />
         <Header />
@@ -27,4 +38,3 @@ export default function RootLayout({
     </html>
   );
 }
-
