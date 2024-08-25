@@ -7,7 +7,7 @@ export const PromotionRow = () => {
     return (
         <div className="bg-[#FFDA6E] h-[52px] w-full flex justify-center items-center sm:justify-col">
             <div className="flex items-center justify-between md:w-2/3 w-full ">
-                <div className='text-black font-bold text-sm'>
+                <div className='text-red font-bold text-sm'>
                     Renew, Refresh
                     {" "}
                     <span className='text-black'>24</span>
