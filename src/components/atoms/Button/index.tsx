@@ -1,8 +1,9 @@
 import React from "react";
+
 interface MainButtonProps {
     id?: string;
     label: string;
-    btnStyle?: "Primary" | "Secondary";
+    btnStyle?: "Primary" | "Secondary" | "Link";
     btnSize: "Large" | "Small" | "Medium";
     fullWith?: boolean;
     icon?: React.ReactNode;
@@ -11,12 +12,12 @@ interface MainButtonProps {
     onClick?: () => void;
     loading?: boolean;
     disabled?: boolean;
-    submit?: boolean; // Make sure weather this is a button or submit type otherwise all the buttons in the form works as submit type and do the rest
+    submit?: boolean; // Make sure whether this is a button or submit type, otherwise all the buttons in the form work as submit type and do the rest
 }
 
 export const MainButton = ({
     label,
-    btnStyle,
+    btnStyle = "Primary",
     btnSize,
     fullWith,
     icon,
@@ -27,23 +28,22 @@ export const MainButton = ({
     loading,
     disabled,
 }: MainButtonProps) => {
-    // Define primary and secondary styles
-    const primaryStyles = "bg-black text-white";
-    const secondaryStyles =
-        "bg-transparent text-primary border border-primary hover:bg-primary hover:text-white ";
+    // Define primary, secondary, and link styles
+    const primaryStyles = "bg-black text-white hover:shadow-md";
+    const secondaryStyles = "bg-transparent text-primary border border-primary hover:bg-primary hover:text-black hover:shadow-md";
+    const linkStyles = "bg-transparent text-black hover:text-primary";
 
     // Determine which styles to apply based on btnStyle prop
-    const disabledStyles =
-        "bg-grayLight text-primary border border-primary cursor-not-allowed";
+    const disabledStyles = "bg-grayLight text-primary border border-primary cursor-not-allowed";
 
     const buttonStyles =
-        btnStyle === "Primary"
-            ? disabled
-                ? disabledStyles
-                : primaryStyles
-            : disabled
-                ? disabledStyles
-                : secondaryStyles;
+        disabled
+            ? disabledStyles
+            : btnStyle === "Primary"
+                ? primaryStyles
+                : btnStyle === "Secondary"
+                    ? secondaryStyles
+                    : linkStyles;
 
     // Define size classes based on btnSize prop
     let sizeClasses = "";
@@ -52,7 +52,7 @@ export const MainButton = ({
     } else if (btnSize === "Medium") {
         sizeClasses = "h-10 px-5 text-sm";
     } else {
-        sizeClasses = "h-8 px-5 text-xs";
+        sizeClasses = "h-8 px-3 text-sm";
     }
 
     // If fullWith prop is true, add full width class
@@ -62,7 +62,7 @@ export const MainButton = ({
 
     return (
         <button
-            className={`font-semibold flex justify-center items-center relative  text-center ${buttonStyles} ${sizeClasses} transition-all duration-300 ease-in-out cursor-pointer ${customStyle} leading-5 rounded-md hover:shadow-md`}
+            className={`font-semibold flex justify-center items-center relative text-center ${buttonStyles} ${sizeClasses} transition-all duration-300 ease-in-out cursor-pointer ${customStyle} leading-5 rounded-md`}
             onClick={onClick}
             type={submit && !disabled ? "submit" : "button"}
         >
