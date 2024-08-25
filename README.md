@@ -1,4 +1,3 @@
-
 # Imperial-web 0.1
 
 ![GitHub](https://github.com/nilonbee/imperial-software-task)
@@ -49,6 +48,12 @@ yarn run dev
 yarn build
 ```
 
+### Production
+
+```
+https://imperial-edu-task.vercel.app/
+```
+
 ---
 
 ## Contributors
@@ -62,4 +67,3 @@ yarn build
 - [Nilan Athapaththu](https://github.com/nilonbee) - Software Engineer (SE)
 
 ---
-

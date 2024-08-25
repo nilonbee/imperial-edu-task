@@ -32,7 +32,7 @@ const config: Config = {
     "9xl": "128rem",
    },
    colors: {
-    primary: "#FFDA6E",
+    primary: "#D2691E",
     primaryDark: "#0d3b66",
     secondary: "#ecc94b",
     textColor: "#333333",

@@ -2,8 +2,8 @@ export const courses = [
     {
         title: "PRINCE2® 7 Practitioner",
         description: "Interactive & Gamified Learning",
-        createdAt: "2024-01-01",
-        imagePath: "/images/PM1.png",
+        createdAt: "2024-01-05",
+        imagePath: "/images/PM4.png",
         author: "Author Name",
         slug: "/course/prince2-practitioner",
         modulesCount: 22,
@@ -56,20 +56,6 @@ export const courses = [
         discountedPrice: "£1699",
     },
     {
-        title: "PRINCE2® 7 Practitioner",
-        description: "Interactive & Gamified Learning",
-        createdAt: "2024-01-01",
-        imagePath: "/images/PM5.png",
-        author: "Author Name",
-        slug: "/course/prince2-practitioner",
-        modulesCount: 22,
-        certificate: "Professional Certificate",
-        discountPercentage: 0,
-        pricePerMonth: "£199.99",
-        originalPrice: "£1455",
-        discountedPrice: "£1099",
-    },
-    {
         title: "Data Science Bootcamp",
         description: "Master Data Science with Python",
         createdAt: "2024-01-10",
@@ -83,4 +69,19 @@ export const courses = [
         originalPrice: "£1999",
         discountedPrice: "£1699",
     },
+    {
+        title: "PRINCE2® 7 Practitioner",
+        description: "Interactive & Gamified Learning",
+        createdAt: "2024-01-01",
+        imagePath: "/images/PM2.png",
+        author: "Author Name",
+        slug: "/course/prince2-practitioner",
+        modulesCount: 22,
+        certificate: "Professional Certificate",
+        discountPercentage: 0,
+        pricePerMonth: "£199.99",
+        originalPrice: "£1455",
+        discountedPrice: "£1099",
+    }
+
 ]

@@ -19,9 +19,7 @@ type Props = {
 export const CourseCard = ({
     title,
     description,
-    createdAt,
     imagePath,
-    author,
     slug,
     modulesCount,
     certificate,
@@ -31,22 +29,21 @@ export const CourseCard = ({
     discountedPrice,
 }: Props) => {
     return (
-        <div className="Frame839 h-full p-5 bg-white rounded-2xl flex-col justify-start items-start gap-6 inline-flex">
-            <div className="Frame787 flex-col justify-start items-start gap-5 flex">
+        <div className="h-full p-5 bg-white rounded-2xl flex-col justify-start items-start gap-6 inline-flex">
+            <div className="flex-col justify-start items-start gap-5 flex">
                 <div className="relative">
                     <Image
                         src={imagePath}
-                        width={200}
-                        height={200}
-                        alt="blog_feature_image"
+                        width={300}
+                        height={300}
+                        alt={title}
                         className="object-cover w-full h-[200px] rounded-md"
+                        quality={100}
                     />
                     {discountPercentage > 0 && (
-                        <div className="Group670 w-12 h-12 absolute top-2 left-2">
-                            <div className="bg-red-500 rounded-lg p-2 text-white text-center">
-                                <span className="text-lg font-extrabold">{discountPercentage}%</span>
-                                <div className="text-base font-semibold">OFF</div>
-                            </div>
+                        <div className="md:hidden absolute top-2 left-2 p-2 bg-red-500 rounded-lg text-white flex flex-col items-center justify-center w-16 h-16">
+                            <span className="text-lg font-extrabold">{discountPercentage}%</span>
+                            <span className="text-base font-semibold">OFF</span>
                         </div>
                     )}
                 </div>
@@ -57,10 +54,10 @@ export const CourseCard = ({
             </div>
             <div className="flex-col justify-start items-start gap-6 flex">
                 <div className="inline-flex gap-2.5">
-                    <div className="bg-[#EFF4FF] px-2.5 py-1 bg-blue-50 rounded-3xl flex items-center gap-1">
+                    <div className="bg-[#EFF4FF] px-2.5 py-1 rounded-3xl flex items-center gap-1">
                         <div className="text-base text-zinc-900">{modulesCount} Modules</div>
                     </div>
-                    <div className="bg-[#EFF4FF] px-2.5 py-1 bg-blue-50 rounded-3xl flex items-center gap-1">
+                    <div className="bg-[#EFF4FF] px-2.5 py-1 rounded-3xl flex items-center gap-1">
                         <div className="text-base text-zinc-900">{certificate}</div>
                     </div>
                 </div>
@@ -81,12 +78,10 @@ export const CourseCard = ({
                             <span className="text-neutral-500 line-through">{originalPrice}</span>
                             <span className="text-zinc-900"> in full</span>
                         </div>
-                        <Link href={`/course/${slug}`} passHref className="py-1 justify-center items-center gap-2 flex">
-                            <div className="text-black text-lg font-semibold leading-snug">View details</div>
-                            <div className="w-6 h-6 px-1.5 py-1 origin-top-left rotate-90 justify-center items-center flex">
-                                <div className="w-3 h-4 relative">
-                                    {/* You can include an icon here */}
-                                </div>
+                        <Link href={`/course/${slug}`} className="py-1 flex items-center gap-2 text-black text-lg font-semibold leading-snug">
+                            View details
+                            <div className="w-6 h-6 px-1.5 py-1 rotate-90 flex items-center justify-center">
+                                {/* You can include an icon here */}
                             </div>
                         </Link>
                     </div>

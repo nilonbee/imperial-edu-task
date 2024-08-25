@@ -61,7 +61,7 @@ export const Hero = () => {
                                     height={450}
                                 />
                                 <Image
-                                    className="object-contain absolute top-0 left-0"
+                                    className="object-contain absolute top-6 left-0"
                                     src="/images/Group.png"
                                     alt="image"
                                     width={380}
