@@ -9,22 +9,22 @@ export const Hero = () => {
             <img src="/images/Vector.png" alt="vector" className="w-1/2 object-cover absolute top-0 right-24  xs:hidden md:block" />
             <ContainerLayout>
                 <InnerContainer>
-                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-2">
+                    <div className="z-10 grid grid-cols-1 md:grid-cols-2">
                         <div className="order-2 md:order-1 mt-8">
-                            <div className="w-[778px]">
-                                <span className="text-[#18191d] text-[46px] font-bold font-['Plus Jakarta Sans'] leading-[73px]">
+                            <div className="w-full md:w-[778px] mt-12">
+                                <span className="text-[#18191d] text-[28px] md:text-[46px]   font-bold font-['Plus Jakarta Sans'] md:leading-[73px]">
                                     Upskill from Anywhere with
                                 </span>
                                 <br />
-                                <span className="text-[#ff965b] text-[46px] font-bold font-['Plus Jakarta Sans'] leading-[73px]">
+                                <span className="text-[#ff965b] text-[28px] md:text-[46px]  font-bold font-['Plus Jakarta Sans'] md:leading-[73px]">
                                     Industry-Recognized
                                 </span>
                                 <br />
-                                <span className="text-[#18191d] text-[46px] font-bold font-['Plus Jakarta Sans'] leading-[73px]">
+                                <span className="text-[#18191d] text-[28px] md:text-[46px]  font-bold font-['Plus Jakarta Sans'] md:leading-[73px]">
                                     Learning
                                 </span>
                             </div>
-                            <div className="w-[531px] text-[#1c1c1c] text-[25px] font-normal font-['Plus Jakarta Sans'] leading-[45px]">
+                            <div className="w-3/4md:w-[531px] text-[#1c1c1c] text-[16px] md:text-[25px] font-normal font-['Plus Jakarta Sans'] leading-[45px]">
                                 Flexible, accredited courses to help you learn and advance from anywhere in the world.
                             </div>
                             <div className="h-[68px] pl-[30px] pr-2.5 py-2.5 my-2.5 bg-[#fbf6f1] rounded-lg border border-[#d1d1d1] flex items-center">
