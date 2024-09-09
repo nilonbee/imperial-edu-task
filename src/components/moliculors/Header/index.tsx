@@ -18,10 +18,10 @@ export const Header = () => {
                     className="mx-auto flex w-full justify-evenly items-center py-2"
                     aria-label="Global"
                 >
-                    <div className="flex lg:flex-2">
+                    <div className="flex lg:flex-2 w-[330px]">
                         <Link className="mt-[2px]" href="/">
                             <Image
-                                className="object-contain"
+                                className="object-contain hover:drop-shadow-xl"
                                 src="/images/edulink.png"
                                 alt="Campus Direct"
                                 width={159}
@@ -29,7 +29,7 @@ export const Header = () => {
                             />
                         </Link>
                         <MainButton
-                            customStyle="sm:hidden"
+                            customStyle="hidden md:flex"
                             label="Explore Courses"
                             btnStyle="Link"
                             btnSize="Small"
@@ -49,7 +49,7 @@ export const Header = () => {
                             icon={<ArrowRightIcon color="black" />}
                         />
                         <MainButton
-                            label="Explore Courses"
+                            label="Register"
                             btnStyle="Link"
                             btnSize="Small"
                             customStyle="border border-black hover:border-primary"

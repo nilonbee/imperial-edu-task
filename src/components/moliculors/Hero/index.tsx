@@ -4,7 +4,9 @@ import Image from 'next/image'
 
 export const Hero = () => {
     return (
-        <div className="relative w-full py-12 overflow-hidden max-h-min bg-[#FBF6F1]">
+        <div className="relative w-full pb-24 overflow-hidden md:max-h-min md:bg-lightAmber md:rounded-b-ellipse mt-0">
+            <div className="absolute top-0 right-0 w-full bg-lightAmber h-[418px]  md:hidden rounded-b-ellipse-sm"/>
+            <img src="/images/Vector.png" alt="vector" className="w-1/2 object-cover absolute top-0 right-24  xs:hidden md:block" />
             <ContainerLayout>
                 <InnerContainer>
                     <div className="relative z-10 grid grid-cols-1 md:grid-cols-2">
@@ -61,7 +63,7 @@ export const Hero = () => {
                                     height={450}
                                 />
                                 <Image
-                                    className="object-contain absolute top-6 left-0"
+                                    className="object-contain absolute top-1 left-0"
                                     src="/images/Group.png"
                                     alt="image"
                                     width={380}

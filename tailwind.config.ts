@@ -54,6 +54,7 @@ const config: Config = {
     errorMsg: "#ed4337",
     amber: "#FFD700",
     slate: "#C0C2C9",
+    lightAmber: "#FBF6F1"
    },
    borderRadius: {
     none: "0",
@@ -61,6 +62,14 @@ const config: Config = {
     DEFAULT: ".25rem",
     lg: ".5rem",
     full: "9999px",
+    ellipse: "50% 200px", // For larger screens
+    'ellipse-sm': "50% 100px", // For smaller screens
+   },
+   backgroundImage: {
+    'gradient-custom': 'linear-gradient(to bottom, #FBF6F1, white)',
+   },
+   height: {
+    'gradient-h': '100px', // Define a custom height for gradient background
    },
   },
  },

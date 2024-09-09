@@ -27,7 +27,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#055da8" />
-        <link rel="icon" href="/images/logo.png" />
+        <link rel="icon" href="/imperial-app/src/app/logo.png" />
         <title>GlobalEdulink</title>
       </Head>
       <body className={`${outfit.className} ${jakartaSans.className}`}>
