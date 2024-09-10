@@ -31,6 +31,10 @@ const config: Config = {
     "8xl": "96rem",
     "9xl": "128rem",
    },
+   skew: {
+    'custom-top': '4deg',
+    'custom-bottom': '4deg',
+   },
    colors: {
     primary: "#D2691E",
     primaryDark: "#0d3b66",
@@ -54,7 +58,8 @@ const config: Config = {
     errorMsg: "#ed4337",
     amber: "#FFD700",
     slate: "#C0C2C9",
-    lightAmber: "#FBF6F1"
+    lightAmber: "#FBF6F1",
+    subTextColor: "#1C1C1C",
    },
    borderRadius: {
     none: "0",

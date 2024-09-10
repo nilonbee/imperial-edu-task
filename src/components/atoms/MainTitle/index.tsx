@@ -6,7 +6,7 @@ export const MainTitle = ({
     text: string;
 }>) => {
     return (
-        <div className="text-center text-zinc-900 text-4xl font-bold font-['Plus Jakarta Sans'] leading-10">
+        <div className="max-w-6xl text-balance text-center text-zinc-900 text-2xl md:text-4xl font-bold font-['Plus Jakarta Sans'] leading-10">
             {text}
         </div>
     );

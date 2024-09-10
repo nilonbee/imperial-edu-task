@@ -5,15 +5,18 @@ import { courses } from "@/mockData/courses";
 export const Courses = () => {
 
     return (
-        <header className="bg-[#FBF6F1] shadow-md -mt-1 z-1000">
+        <div className="relative bg-lightAmber -mt-1">
+            <div className="absolute -top-24 left-0 skew-y-custom-top w-full h-48  bg-lightAmber -z-10"/>
+            <div className="absolute -bottom-24 left-0 -skew-y-custom-bottom w-full h-48 bg-lightAmber -z-10"/>
             <ContainerLayout>
                 <InnerContainer>
+                    {/* Main title*/}
                     <div className="py-24">
-                        <MainTitle text="Master Your Career Growth with Our Top-Rated, Expert-Led Courses" />
+                        <MainTitle text="Master Your Career Growth with Our Top-Rated, Expert-Led Courses"/>
                     </div>
                     {/* Courses grid */}
-                    <div className="py-12">
-                        <GridWrapper gap="2">
+                    <div className="mx-auto w-full justify-center flex">
+                        <GridWrapper gap="5">
                             {courses.map((course, index) => (
                                 <CourseCard
                                     key={index}
@@ -35,6 +38,6 @@ export const Courses = () => {
                     </div>
                 </InnerContainer>
             </ContainerLayout>
-        </header>
+        </div>
     );
 };

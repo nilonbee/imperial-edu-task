@@ -1,7 +1,7 @@
 export const courses = [
     {
         title: "PRINCE2® 7 Practitioner",
-        description: "Interactive & Gamified Learning",
+        description: "The PRINCE2® 7 Practitioner Interactive & Gamified Learning is designed for aspiring and current proj...",
         createdAt: "2024-01-05",
         imagePath: "/images/PM4.png",
         author: "Author Name",
@@ -15,7 +15,7 @@ export const courses = [
     },
     {
         title: "Data Science Bootcamp",
-        description: "Master Data Science with Python",
+        description: "PRINCE2® 7 Foundation Gamified Certification comprises innovative additions and improvements. T..",
         createdAt: "2024-01-10",
         imagePath: "/images/PM2.png",
         author: "Author Name",
@@ -29,7 +29,7 @@ export const courses = [
     },
     {
         title: "PRINCE2® 7 Practitioner",
-        description: "Interactive & Gamified Learning",
+        description: "The PRINCE2® 7 Practitioner Interactive & Gamified Learning is designed for aspiring and current proje...",
         createdAt: "2024-01-01",
         imagePath: "/images/PM3.png",
         author: "Author Name",
@@ -43,7 +43,7 @@ export const courses = [
     },
     {
         title: "Data Science Bootcamp",
-        description: "Master Data Science with Python",
+        description: "Do you wish to qualify as a Lean Six Sigma Practitioner? Upon completing the Yellow and Green Belts, individu... ",
         createdAt: "2024-01-10",
         imagePath: "/images/PM4.png",
         author: "Author Name",
@@ -57,7 +57,7 @@ export const courses = [
     },
     {
         title: "Data Science Bootcamp",
-        description: "Master Data Science with Python",
+        description: "The PRINCE2® 7 Practitioner Gamified Certification is designed for project managers and project  profession...",
         createdAt: "2024-01-10",
         imagePath: "/images/PM6.png",
         author: "Author Name",
@@ -71,7 +71,7 @@ export const courses = [
     },
     {
         title: "PRINCE2® 7 Practitioner",
-        description: "Interactive & Gamified Learning",
+        description: "PRINCE2® 7 Foundation Gamified Certification comprises innovative additions and improvements. T..",
         createdAt: "2024-01-01",
         imagePath: "/images/PM2.png",
         author: "Author Name",

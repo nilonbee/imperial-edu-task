@@ -10,7 +10,7 @@ export const GridWrapper = ({ children, gap }: Props) => {
 
     return (
         <div
-            className={`grid ${customGap} lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 w-full`}
+            className={`grid ${customGap} max-w-[1000px] lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 w-full`}
         >
             {children}
         </div>
