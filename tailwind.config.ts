@@ -60,6 +60,8 @@ const config: Config = {
     slate: "#C0C2C9",
     lightAmber: "#FBF6F1",
     subTextColor: "#1C1C1C",
+    lightGreen: "#D7F0E5",
+    lightYellow: "#F6FFDB",
    },
    borderRadius: {
     none: "0",

@@ -1,4 +1,5 @@
 export * from "./Header";
 export * from "./Hero";
 export * from "./Partners";
-export * from "./Courses";
+export * from "./CoursesList";
+export * from "./JourneysList";

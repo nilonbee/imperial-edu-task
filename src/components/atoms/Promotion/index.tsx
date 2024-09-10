@@ -5,7 +5,7 @@ import {ArrowRightIcon, CloseIcon} from "@/components/atoms/Icons";
 
 export const PromotionRow = () => {
     return (
-        <div className="relative bg-[#FFDA6E] md:h-[52px] h-[120px] w-full flex justify-center items-center sm:justify-col">
+        <header style={{zIndex: 10000}} className="sticky top-0 bg-[#FFDA6E] md:h-[52px] h-[120px] w-full flex justify-center items-center sm:justify-col">
             <div className="flex items-center justify-between md:w-1/2 w-full flex-col md:flex-row gap-3">
                 <div className='text-red font-bold text-sm'>
                     Renew, Refresh
@@ -27,6 +27,6 @@ export const PromotionRow = () => {
                     <CloseIcon/>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {ArrowRightIcon} from "@/components/atoms/Icons"
-import {MainButton} from "@/components/atoms";
+import {Card, MainButton} from "@/components/atoms";
 
 type Props = {
     title: string;
@@ -31,8 +31,8 @@ export const CourseCard = ({
                                discountedPrice,
                            }: Props) => {
     return (
-        <div
-            className="h-full px-2 py-4 flex justify-center bg-white rounded-2xl flex-col items-center gap-4  max-w-[308px] min-w-[280px]">
+        // <div className="h-full px-2 py-4 flex justify-center bg-white rounded-2xl flex-col items-center gap-4  max-w-[308px] min-w-[280px]">
+        <Card>
             <div className="flex-col justify-start items-start gap-3 flex">
                 <div className="relative">
                     <div className="relative w-[265px] xl:w-[285px] h-[149px]">
@@ -78,7 +78,8 @@ export const CourseCard = ({
                             <div className="text-neutral-600 text-base font-semibold">/ month</div>
                         </div>
                     </div>
-                    <div className="flex flex-col md:flex-row justify-between  items-start md:items-center max-w-[308px] min-w-[280px]">
+                    <div
+                        className="flex flex-col md:flex-row justify-between  items-start md:items-center max-w-[308px] min-w-[280px]">
                         <div className="pl-3 text-sm font-semibold">
                             <span className="text-zinc-900">{discountedPrice} </span>
                             <span className="text-zinc-900">in full</span>
@@ -89,12 +90,14 @@ export const CourseCard = ({
                                 label="View Details"
                                 btnStyle="Link"
                                 btnSize="Small"
-                                icon={<ArrowRightIcon color="black" />}
+                                icon={<ArrowRightIcon color="black"/>}
                             />
                         </Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </Card>
+
+        // </div>
     );
 };

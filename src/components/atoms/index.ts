@@ -9,3 +9,6 @@ export * from "./SubTitle";
 export * from "./MainTitle";
 export * from "./CardWrapper";
 export * from "./CourseCard";
+export * from "./JourneyCard";
+export * from "./Card";
+export * from "./RoundButton"

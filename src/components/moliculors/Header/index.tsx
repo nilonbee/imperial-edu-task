@@ -12,7 +12,7 @@ export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <header className="bg-[#FBF6F1] shadow-md -mt-1 z-1000">
+        <header style={{zIndex: 100000}} className="bg-[#FBF6F1] shadow-md -mt-1 sticky md:top-[52px] top-[120px]">
             <ContainerLayout>
                 <nav
                     className="mx-auto flex w-full justify-evenly items-center py-2"
