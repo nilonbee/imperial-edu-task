@@ -1,6 +1,6 @@
-import {Card} from "@/components/atoms";
+import { Card } from "@/components/atoms";
 import Image from "next/image";
-import {QuoteIcon, TrustPilotIcon} from "@/components/atoms/Icons";
+import { QuoteIcon, TrustPilotIcon } from "@/components/atoms/Icons";
 
 interface CardProps {
     name: string;
@@ -10,9 +10,9 @@ interface CardProps {
     description: string;
 }
 
-export const TestimonialCard = ({name, country, bgColor, description, imagePath}: CardProps) => {
+export const TestimonialCard = ({ name, country, bgColor, description, imagePath }: CardProps) => {
     return (
-        <div style={{backgroundColor: bgColor}} className="h-full px-2 py-4 flex justify-center bg-white rounded-2xl
+        <div style={{ backgroundColor: bgColor }} className="h-full px-2 py-4 flex justify-center bg-white rounded-2xl
             flex-col items-center gap-4  max-w-[308px] min-w-[280px]">
             <div className="justify-start items-start flex w-full">
                 {/*    image country  and name*/}
@@ -30,13 +30,13 @@ export const TestimonialCard = ({name, country, bgColor, description, imagePath}
                 </div>
             </div>
             <div className="flex pl-2 justify-start w-full">
-                <QuoteIcon/>
+                <QuoteIcon />
             </div>
             <div className="flex pl-2">
                 <p className="text-sm font-normal">{description}</p>
             </div>
             <div className="flex items-center justify-start px-3 w-full">
-                <TrustPilotIcon/>
+                <TrustPilotIcon />
             </div>
         </div>
     )
