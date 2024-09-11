@@ -52,9 +52,9 @@ export const CourseCard = ({
 
                     {(discountPercentage > 0) && (
                         <div
-                            className="md:hidden absolute top-2 left-2 p-2 bg-errorMsg rounded-lg text-white flex flex-col items-center justify-center w-16 h-16">
-                            <span className="text-lg font-extrabold">{discountPercentage}%</span>
-                            <span className="text-base font-semibold">OFF</span>
+                            className="absolute top-2 left-2 p-1 bg-errorMsg rounded-lg text-white flex flex-col items-center justify-center w-12 h-12">
+                            <span className="text-sm font-extrabold">{discountPercentage}%</span>
+                            <span className="text-sm font-semibold">OFF</span>
                         </div>
                     )}
                 </div>
