@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {ArrowRightIcon} from "@/components/atoms/Icons"
+import {ArrowRightIcon, GlobalIcon, LiveIcon} from "@/components/atoms/Icons"
 import {Card, MainButton} from "@/components/atoms";
 
 type Props = {
@@ -15,7 +15,10 @@ type Props = {
     discountPercentage: number;
     pricePerMonth: string;
     originalPrice: string;
-    discountedPrice: string;
+    discountedPrice?: string;
+    icon1: React.ReactNode;
+    icon2: React.ReactNode;
+    isMainCourse?: boolean;
 };
 
 export const CourseCard = ({
@@ -29,9 +32,11 @@ export const CourseCard = ({
                                pricePerMonth,
                                originalPrice,
                                discountedPrice,
+                               icon1,
+                               icon2,
+                               isMainCourse,
                            }: Props) => {
     return (
-        // <div className="h-full px-2 py-4 flex justify-center bg-white rounded-2xl flex-col items-center gap-4  max-w-[308px] min-w-[280px]">
         <Card>
             <div className="flex-col justify-start items-start gap-3 flex">
                 <div className="relative">
@@ -45,7 +50,7 @@ export const CourseCard = ({
                         />
                     </div>
 
-                    {discountPercentage > 0 && (
+                    {(discountPercentage > 0) && (
                         <div
                             className="md:hidden absolute top-2 left-2 p-2 bg-red-500 rounded-lg text-white flex flex-col items-center justify-center w-16 h-16">
                             <span className="text-lg font-extrabold">{discountPercentage}%</span>
@@ -54,23 +59,25 @@ export const CourseCard = ({
                     )}
                 </div>
 
-                <div className="text-zinc-900 text-xl font-bold leading-loose">
+                <div className="ml-2.5 h-12 text-zinc-900 text-lg font-bold leading-sm">
                     {title}
                 </div>
             </div>
             <div className="flex-col justify-start items-start gap-6 flex">
                 <div className="inline-flex gap-2.5 ml-2">
                     <div className="bg-[#EFF4FF] px-2 py-1 rounded-3xl flex items-center gap-1">
+                        {icon1}
                         <div className="text-xs text-zinc-900 line-clamp-2">{modulesCount} Modules</div>
                     </div>
-                    <div className="bg-[#EFF4FF] px-2.5 py-1 rounded-3xl flex items-center gap-1">
+                    <div className="bg-[#EFF4FF] px-1 py-1 rounded-3xl flex items-center gap-1">
+                        {icon2}
                         <div className="text-xs text-zinc-900">{certificate}</div>
                     </div>
                 </div>
                 <div className="text-neutral-600 text-xs py-1 px-2 leading-normal ml-1">
                     {description}
                 </div>
-                <div className="flex-col justify-start items-start gap-1 flex">
+                {isMainCourse ? (<div className="flex-col justify-start items-start gap-1 flex">
                     <div className="border-b border-neutral-200 flex items-center gap-1.5 pl-3 py-1">
                         <div className="text-neutral-600 text-base font-semibold">From</div>
                         <div className="flex items-center gap-2">
@@ -94,10 +101,18 @@ export const CourseCard = ({
                             />
                         </Link>
                     </div>
-                </div>
+                </div>): (
+                    <div className="flex-col justify-start items-start gap-1 flex">
+                        <div
+                            className="flex flex-col md:flex-row justify-between  items-start md:items-center max-w-[308px] min-w-[280px]">
+                            <div className="pl-3">
+                                <span className="font-extrabold text-2xl text-black mr-3 ">{originalPrice}</span>
+                                <span className="text-gray font-semibold line-through">{discountedPrice}</span>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </Card>
-
-        // </div>
     );
 };

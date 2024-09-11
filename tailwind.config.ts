@@ -45,6 +45,7 @@ const config: Config = {
     gray: "#4a5568",
     black: "#000000",
     grayLight: "#f3f3f3",
+    mediumGray: "#E8E8E8",
     lightBlue: "#D4EBFF",
     blue: "#0000FF",
     grayMedium: "#999",
@@ -62,6 +63,12 @@ const config: Config = {
     subTextColor: "#1C1C1C",
     lightGreen: "#D7F0E5",
     lightYellow: "#F6FFDB",
+    mediumGreen: "#B8F1DA",
+    mediumViolet: "#DED6FC",
+    mediumOrange: "#FFF3CF",
+    pink: "#FCD6D6",
+    teal: "#D6FCFC",
+    lightBlack: "#27282E"
    },
    borderRadius: {
     none: "0",

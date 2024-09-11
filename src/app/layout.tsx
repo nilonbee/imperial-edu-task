@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "GlobalEdulink",
   description: "Upskill from Anywhere with Industry-Recognized Learning",
   icons: {
-    icon: "/images/logo.png",
+    icon: "./favicon.png",
   },
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#055da8" />
-        <link rel="icon" href="/imperial-app/src/app/logo.png" />
+        <link rel="icon" href="./favicon.ico" />
         <title>GlobalEdulink</title>
       </Head>
       <body className={`${outfit.className} ${jakartaSans.className}`}>

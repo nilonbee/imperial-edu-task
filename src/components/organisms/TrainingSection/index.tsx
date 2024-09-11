@@ -1,69 +1,34 @@
 'use client';
+import React, {useState} from "react";
 import {
     ContainerLayout,
-    CourseCard,
     GridWrapper,
     InnerContainer,
     MainButton,
     MainTitle,
-    MenuItem,
     RoundButton
 } from "@/components/atoms";
-import React, {useState} from "react";
-import {courses} from "@/mockData/courses";
+import {training} from "@/mockData/training";
 import {ArrowRightIcon, NextIcon} from "@/components/atoms/Icons";
+import {CourseCard} from "@/components/moliculors";
 
-export const dummyTexts = ["All Courses", "Project Management", "Business Management", "Employability Skills", "Life Learning"]
 
-export const Courses = () => {
-
+export const TrainingSection = () => {
     const [startIndex, setStartIndex] = useState(0);
-
-    // Total buttons to show at once (for example, 3: one middle, and two on sides)
     const visibleButtons = 4;
 
-    // Handle the "See More" click
-    const handleSeeMore = () => {
-        // Update the startIndex to the next set of buttons
-        setStartIndex((prevIndex) => (prevIndex + 1) % dummyTexts.length);
-    };
-    // Create a slice of the dummyTexts array based on the startIndex
-    const buttonsToShow = dummyTexts.slice(startIndex, startIndex + visibleButtons);
-
-    // If there are fewer buttons remaining at the end of the array, wrap around to the start
-    if (buttonsToShow.length < visibleButtons) {
-        buttonsToShow.push(...dummyTexts.slice(0, visibleButtons - buttonsToShow.length));
-    }
-
     return (
-        <div className="relative bg-lightAmber -mt-1">
-            <div className="absolute -top-24 left-0 skew-y-custom-top w-full h-48  bg-lightAmber -z-10"/>
-            <div className="absolute -bottom-24 left-0 -skew-y-custom-bottom w-full h-48 bg-lightAmber -z-10"/>
+        <div className="relative bg-lightAmber mt-12">
             <ContainerLayout>
                 <InnerContainer>
                     {/* Main title*/}
                     <div className="py-6">
                         <MainTitle text="Master Your Career Growth with Our Top-Rated, Expert-Led Courses"/>
                     </div>
-                    <div
-                        className="py-6 flex justify-center items-center gap-3 md:max-w-[800px] max-w-[300px] m-auto relative">
-                        {/* Map over the buttonsToShow */}
-                        {buttonsToShow.map((item: string, index: number) => (
-                            <RoundButton text={item} key={index}/>
-                        ))}
-
-                        {/* "See More" button on the far right */}
-                        <div className="absolute right-0">
-                            <button onClick={handleSeeMore} className="flex items-center">
-                                <NextIcon/>
-                            </button>
-                        </div>
-                    </div>
-
                     {/* Courses grid */}
                     <div className="mx-auto w-full justify-center flex">
                         <GridWrapper gap="4">
-                            {courses.map((course, index) => (
+                            {training.map((course, index) => (
                                 <CourseCard
                                     key={index}
                                     title={course.title}
@@ -78,6 +43,8 @@ export const Courses = () => {
                                     pricePerMonth={course.pricePerMonth}
                                     originalPrice={course.originalPrice}
                                     discountedPrice={course.discountedPrice}
+                                    icon2={course.icon1}
+                                    icon1={course.icon2}
                                 />
                             ))}
                         </GridWrapper>

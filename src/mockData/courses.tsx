@@ -1,3 +1,5 @@
+import {ClockIcon, UserIcon} from "@/components/atoms/Icons";
+
 export const courses = [
     {
         title: "PRINCE2® 7 Practitioner",
@@ -8,10 +10,12 @@ export const courses = [
         slug: "/course/prince2-practitioner",
         modulesCount: 22,
         certificate: "Professional Certificate",
-        discountPercentage: 0,
+        discountPercentage: 40,
         pricePerMonth: "£199.99",
         originalPrice: "£1455",
         discountedPrice: "£1099",
+        icon1: <ClockIcon/>,
+        icon2: <UserIcon/>
     },
     {
         title: "Data Science Bootcamp",
@@ -26,6 +30,8 @@ export const courses = [
         pricePerMonth: "£249.99",
         originalPrice: "£1999",
         discountedPrice: "£1699",
+        icon1: <ClockIcon/>,
+        icon2: <UserIcon/>
     },
     {
         title: "PRINCE2® 7 Practitioner",
@@ -36,10 +42,12 @@ export const courses = [
         slug: "/course/prince2-practitioner",
         modulesCount: 22,
         certificate: "Professional Certificate",
-        discountPercentage: 0,
+        discountPercentage: 15,
         pricePerMonth: "£199.99",
         originalPrice: "£1455",
         discountedPrice: "£1099",
+        icon1: <ClockIcon/>,
+        icon2: <UserIcon/>
     },
     {
         title: "Data Science Bootcamp",
@@ -54,6 +62,8 @@ export const courses = [
         pricePerMonth: "£249.99",
         originalPrice: "£1999",
         discountedPrice: "£1699",
+        icon1: <ClockIcon/>,
+        icon2: <UserIcon/>
     },
     {
         title: "Data Science Bootcamp",
@@ -68,6 +78,8 @@ export const courses = [
         pricePerMonth: "£249.99",
         originalPrice: "£1999",
         discountedPrice: "£1699",
+        icon1: <ClockIcon/>,
+        icon2: <UserIcon/>
     },
     {
         title: "PRINCE2® 7 Practitioner",
@@ -78,10 +90,12 @@ export const courses = [
         slug: "/course/prince2-practitioner",
         modulesCount: 22,
         certificate: "Professional Certificate",
-        discountPercentage: 0,
+        discountPercentage: 30,
         pricePerMonth: "£199.99",
         originalPrice: "£1455",
         discountedPrice: "£1099",
+        icon1: <ClockIcon/>,
+        icon2: <UserIcon/>
     }
 
 ]

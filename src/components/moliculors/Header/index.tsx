@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
-import { ContainerLayout, MainButton, MenuItem } from "@/components/atoms";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import {ContainerLayout, MainButton, MenuItem} from "@/components/atoms";
+import {Dialog} from "@headlessui/react";
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
+import {useState} from "react";
 import Image from "next/image";
-import { ArrowDropDown } from "@/components/atoms/Icons/ArrowDropDown";
-import { ArrowRightIcon } from "@/components/atoms/Icons";
+import {ArrowDropDown} from "@/components/atoms/Icons/ArrowDropDown";
+import {ArrowRightIcon} from "@/components/atoms/Icons";
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -33,20 +33,20 @@ export const Header = () => {
                             label="Explore Courses"
                             btnStyle="Link"
                             btnSize="Small"
-                            icon={<ArrowDropDown />}
+                            icon={<ArrowDropDown/>}
                         />
                     </div>
 
 
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex gap-8">
-                        <MenuItem menuName="Corporate Training" uri="/" isHomePage />
-                        <MenuItem menuName="Become an Instructor" uri="/" />
+                        <MenuItem menuName="Corporate Training" uri="/" isHomePage/>
+                        <MenuItem menuName="Become an Instructor" uri="/"/>
                         <MainButton
                             label="Login"
                             btnStyle="Link"
                             btnSize="Small"
-                            icon={<ArrowRightIcon color="black" />}
+                            icon={<ArrowRightIcon color="black"/>}
                         />
                         <MainButton
                             label="Register"
@@ -64,7 +64,7 @@ export const Header = () => {
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open menu</span>
-                            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                            <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
                         </button>
                     </div>
                 </nav>
@@ -76,8 +76,9 @@ export const Header = () => {
                 open={mobileMenuOpen}
                 onClose={setMobileMenuOpen}
             >
-                <div className="fixed inset-0 z-10 bg-black bg-opacity-25" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-1/2 bg-white px-4 py-4 z-100">
+                <div className="fixed inset-0 z-10 bg-black bg-opacity-25"/>
+                <Dialog.Panel style={{zIndex: 10000000}}
+                              className="fixed inset-y-0 right-0 z-10 w-1/2 bg-white px-4 py-4 z-100">
                     <div className="flex items-center justify-between w-full">
                         <a href="#" className="-m-1.5 p-1.5">
                             <Image
@@ -94,14 +95,14 @@ export const Header = () => {
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
-                            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                            <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
                         </button>
                     </div>
                     <div className="mt-5 flow-root">
                         <div>
                             <div className="space-y-5 py-6 flex flex-col border-b border-borderGray">
-                                <MenuItem menuName="Corporate Training" uri="/" isHomePage />
-                                <MenuItem menuName="Become an Instructor" uri="/" />
+                                <MenuItem menuName="Corporate Training" uri="/" isHomePage/>
+                                <MenuItem menuName="Become an Instructor" uri="/"/>
                             </div>
                         </div>
                     </div>
