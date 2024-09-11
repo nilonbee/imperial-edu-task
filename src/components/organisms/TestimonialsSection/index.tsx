@@ -68,9 +68,9 @@ export const TestimonialsSection = () => {
     }, []);
 
     return (
-        <div className="relative h-full">
+        <div className="relative h-full pb-6">
             <div className="absolute top-64 left-0 skew-y-2  w-full h-[220px] bg-lightBlack -z-10"/>
-            <div className="absolute bottom-0 left-0  w-full md:h-[180px] h-[1000px] bg-lightBlack -z-10"/>
+            <div className="absolute bottom-0 left-0  w-full md:h-[180px] h-[200px] bg-lightBlack -z-10"/>
             {/* Journeys list */}
             <ContainerLayout>
                 <InnerContainer>

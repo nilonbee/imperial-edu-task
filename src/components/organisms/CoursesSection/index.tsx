@@ -18,10 +18,7 @@ export const CoursesSection = () => {
 
     const [startIndex, setStartIndex] = useState(0);
 
-    // Total buttons to show at once (for example, 3: one middle, and two on sides)
     const visibleButtons = 3;
-
-    // Handle the "See More" click
     const handleSeeMore = () => {
         // Update the startIndex to the next set of buttons
         setStartIndex((prevIndex) => (prevIndex + 1) % dummyTexts.length);
@@ -52,13 +49,12 @@ export const CoursesSection = () => {
                         ))}
 
                         {/* "See More" button on the far right */}
-                        <div className="absolute right-0">
+                        <div className="absolute -right-3">
                             <button onClick={handleSeeMore} className="flex items-center">
                                 <NextIcon/>
                             </button>
                         </div>
                     </div>
-
                     {/* Courses grid */}
                     <div className="mx-auto w-full justify-center flex">
                         <GridWrapper gap="4">

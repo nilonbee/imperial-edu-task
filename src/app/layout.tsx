@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { PromotionRow } from "@/components/atoms";
-import { Header } from "@/components/moliculors";
+import {Footer, Header} from "@/components/moliculors";
 import Head from "next/head";
 
 const outfit = Outfit({ subsets: ["latin"] });
@@ -34,6 +34,7 @@ export default function RootLayout({
         <PromotionRow />
         <Header />
         {children}
+      <Footer/>
       </body>
     </html>
   );
