@@ -9,8 +9,8 @@ export const Hero = () => {
             <img src="/images/Vector.png" alt="vector" className="hidden md:block w-1/2 object-cover absolute top-0 right-24 xs:hidden" />
             <ContainerLayout>
                 <InnerContainer>
-                    <div className="z-10 grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                        <div className="order-2 md:order-1 mt-6">
+                    <div className="z-10 grid xs:grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                        <div className="order-2 lg:order-1 mt-6">
                             <div className="w-full md:w-[778px] mt-6">
                                 <span className="text-[#18191d] text-[20px] sm:text-[24px] md:text-[38px] lg:text-[48px] font-bold font-['Plus Jakarta Sans'] leading-tight md:leading-[73px]">
                                     Upskill from Anywhere with
@@ -52,16 +52,16 @@ export const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="order-1 md:order-2 flex justify-center mt-8 relative">
+                        <div className="order-1 lg:order-2 flex justify-center mt-8 relative">
                             <div>
                                 <Image
-                                    className="object-contain ml-10 md:mr-6  mt-6 w-[280px] h-[320px] md:w-[480px] md:h-[460px]"
+                                    className="object-contain ml-4 md:mr-6  mt-6 w-[320px] h-[340px] sm:w-[350px] sm:h-[360px] md:w-[580px] md:h-[560px]"
                                     src="/images/ellipse.png"
                                     alt="image"
                                     width={480}
                                     height={450}
                                 />
-                                <div className="absolute md:top-0 top-4 md:-left-12 right-12 w-[300px] h-[320px] sm:w-[350px] sm:h-[360px] md:w-[450px] md:h-[460px]">
+                                <div className="absolute top-2 left-2 w-[300px] h-[320px] sm:w-[350px] sm:h-[360px] md:w-[510px] md:h-[520px]">
                                     <Image
                                         className="object-contain"
                                         src="/images/Group.png"

@@ -22,7 +22,7 @@ export * from './User';
 export * from './WhitePrev';
 export * from './WhiteNext';
 export * from './TrustPilot';
-export * from './Coma';
+export * from './Quote';
 export * from './Footerlogo';
 export * from './Youtube';
 export * from './Linkedin';
